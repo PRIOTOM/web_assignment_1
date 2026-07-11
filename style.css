@@ -43,13 +43,14 @@
     cursor: pointer;
 }
 
+/* Header Section */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-ul {
+nav ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
@@ -69,6 +70,7 @@ ul li a {
   padding: 20px;
 }
 
+/* Body Part 1 */
 .content-head {
     font-size: 20px;
     text-align: center;
@@ -100,3 +102,56 @@ h5 {
     font-size: 20px;
     color: rgb(19, 22, 189);
 }
+
+/* Body Part 2 */
+
+section h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    width: 250px;
+}
+
+.pro-card {
+    background-color: rgb(56, 53, 56);
+    color: white;
+}
+
+.btn{
+    padding: 10px 70px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-card {
+    background-color: #f4f5f7;
+    color: rgb(148, 46, 231);
+    font-size: 16px;
+}
+
+.btn-pro {
+    background-color: rgb(148, 46, 231);
+    color: white;
+    font-size: 16px;
+}
+
