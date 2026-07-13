@@ -156,24 +156,66 @@
 
     </section>
 
-     <section class="form">
-        <div>
-            <h2>For more information fill the form </h2>
-            <form>
-                <input type="text" placeholder="Your name">
-                <input type="text" placeholder="Your email">
-                <textarea rows="5" placeholder="Write your Message"></textarea>
-                <button class="common-btn">Submit</button>
-            </form>
+    <section class="missing">
+        <div class="missing-head">
+            <p class="eyebrow">Good to Know</p>
+            <h2 class="heading">Frequently Asked Questions</h2>
+            <p class="sub">Everything you need to know before you register.</p>
         </div>
+        <div class="faq-wrap">
+            <div class="faq-item">
+                <button class="faq-q" type="button" aria-expanded="false">Where is the conference held? <span class="icon" aria-hidden="true">＋</span></button>
+                <div class="faq-a">The event takes place at the Grand Convention Center, with all sessions, meals, and networking areas in one venue.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" type="button" aria-expanded="false">Can I get a refund on my ticket? <span class="icon" aria-hidden="true">＋</span></button>
+                <div class="faq-a">Yes — full refunds are available up to 14 days before the event. After that, tickets can be transferred to another attendee.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" type="button" aria-expanded="false">Are sessions recorded? <span class="icon" aria-hidden="true">＋</span></button>
+                <div class="faq-a">All keynote and main-track sessions are recorded and shared with registered attendees within a week after the event.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" type="button" aria-expanded="false">Is there a group discount? <span class="icon" aria-hidden="true">＋</span></button>
+                <div class="faq-a">Teams of 5 or more get 20% off. Reach out to our team after registering to apply the discount.</div>
+            </div>
+        </div>
+
+        <script>
+            document.querySelectorAll('.faq-item').forEach((item) => {
+                const button = item.querySelector('.faq-q');
+                const answer = item.querySelector('.faq-a');
+
+                button.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('active');
+
+                    document.querySelectorAll('.faq-item.active').forEach((activeItem) => {
+                        activeItem.classList.remove('active');
+                        activeItem.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+                    });
+
+                    if (!isOpen) {
+                        item.classList.add('active');
+                        button.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+        </script>
+
     </section>
 
     <footer>
-        <div class="footer-logo">
-            <img src=".\B14-A01-DevConf-2026\assets\footer-logo.png" alt="footer-logo">
-            <p>© 2026 DevConf. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./B14-A01-DevConf-2026/assets/footer-logo.png" alt="footer-logo">
+                <p>© 2026 DevConf. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
         </div>
-
     </footer>
 
 
